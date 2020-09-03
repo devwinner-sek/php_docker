@@ -1,0 +1,127 @@
+
+
+//Traitement de profil utilsateur 
+
+//Deb
+function treat_profil(val) {  
+
+     requestval_treat(readDataval_treat,val);
+  }
+
+function requestval_treat(callback,val) {
+    var xhr = getXMLHttpRequest();
+     
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            callback(xhr.responseText);
+        }
+    };
+    //var nickname= encodeURIComponent(document.getElementById("simpleSMS").value);
+    var nickname= val;
+
+    //Envoi des donnees a php
+   var email      =  document.getElementById('email').value;
+   var  password    =  document.getElementById('password').value;
+   var   entreprise  =  document.getElementById('entreprise').value;
+    
+    xhr.open("POST",'Treats/profil_treat.php?email='+email + '&password='+password +'&entreprise='+entreprise, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded") ;
+    //alert('email='+email + '&password='+password +'&entreprise='+entreprise);
+    xhr.send(null) ;
+}
+ 
+function readDataval_treat(sData) {
+     document.getElementById('treat_profil').innerHTML = sData;
+    // document.getElementById('page').innerHTML = "EN MAINTENANCE..................";
+}
+//fin
+
+
+//Traitement de creation de compte  
+
+//Deb
+function treat_compte_user(val) {  
+
+     requestval_compte_user(readDataval_compte_user,val);
+  }
+
+
+function requestval_compte_user(callback,val) {
+    var xhr = getXMLHttpRequest();
+     
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            callback(xhr.responseText);
+        }
+    };
+    //var nickname= encodeURIComponent(document.getElementById("simpleSMS").value);
+    var nickname= val;
+
+    //Recupertion des donnees
+   var    nom_user               =  document.getElementById('nom_user').value;
+   var    passwd                 =  document.getElementById('passwd').value;
+   var    name                   =  document.getElementById('name').value;
+   var    prenom                 =  document.getElementById('prenom').value;
+   var    number_cni             =  document.getElementById('number_cni').value;
+   var    type_compte            =  document.getElementById('type_compte').value;
+   var    email                  =  document.getElementById('email').value;
+   var    phone_number1          =  document.getElementById('phone_number1').value;
+   var    phone_number2          =  document.getElementById('phone_number2').value;
+   var    nom_entreprise         =  document.getElementById('nom_entreprise').value;
+
+    
+    xhr.open("GET",'Treats/compte_treat.php?nom_user='+nom_user + '&passwd='+passwd +'&name='+name+'&prenom='+prenom +'&number_cni='+number_cni +'&type_compte='+type_compte+'&email='+email+'&phone_number1='+phone_number1+'&phone_number2='+phone_number2 +'&nom_entreprise='+nom_entreprise, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded") ;
+    //alert('email='+email + '&password='+password +'&entreprise='+entreprise);
+    xhr.send(null) ;
+}
+ 
+function readDataval_compte_user(sData) {
+     document.getElementById('treat_profil').innerHTML = sData;
+    // document.getElementById('page').innerHTML = "EN MAINTENANCE..................";
+}
+//fin
+
+
+//Operations sur un compte
+
+
+//Suporession 
+function delete_element(id_compte,nom_table) {  
+
+     requestval_delete(readDataval_delete,id_compte,nom_table);
+  }
+
+function requestval_delete(callback,id_compte,nom_table) {
+    var xhr = getXMLHttpRequest();
+     
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            callback(xhr.responseText);
+        }
+    };
+    //var nickname= encodeURIComponent(document.getElementById("simpleSMS").value);
+       
+    xhr.open("GET",'Treats/remove_treat.php?id_element='+id_compte + '&nom_table='+nom_table, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-formurlencoded") ;
+    //alert('email='+email + '&password='+password +'&entreprise='+entreprise);
+    xhr.send(null) ;
+}
+
+function readDataval_delete(sData) {
+     document.getElementById('treat_profil').innerHTML = sData;
+    // document.getElementById('page').innerHTML = "EN MAINTENANCE..................";
+}
+//fin
+
+
+
+
+
+
+
+
+
+
+
+

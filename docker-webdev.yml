@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  php-apache:
+    image: geerlingguy/php-apache:latest
+    container_name: php-apache
+    ports:
+      - "8089:80"
+    restart: always
+    # See 'Custom PHP codebase' for instructions for volumes.
+    volumes: 
+      - ./Traefik_pro:/var/www/html:rw,delegated

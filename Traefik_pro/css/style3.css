@@ -1,0 +1,159 @@
+/**
+* Template Name: Dashio
+* Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+* Author: TemplateMag.com
+* License: https://templatemag.com/license/
+*/
+/*
+Website: SMS NTIC 
+Version of Bootstrap : 3.1.1 
+Author: SEGNIGA Edoh Kossivi
+Email : segedoh@gmail.com
+
+Couleur banniere: #5791b7;
+
+/* Import fonts*/
+@import url(http://fonts.googleapis.com/css?family=Poppins:400,700,900); 
+
+
+/* Import fonts 
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);*/
+
+/* BASIC THEME CONFIGURATION */
+/********************* BODY  *****************/
+
+body {
+    color: #797979;
+    background: #e7eaed;
+    font-family: 'Poppins', Helvetica,sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size:13px;
+    /*background: url('../img/divider2.jpg') no-repeat top center;*/
+}
+
+
+.modal_fond
+{
+  background: url('../img/divider2.jpg') no-repeat top center;
+}
+html { margin-bottom: 200px }
+
+.header_whit_index
+{
+   background:#3b8dbb;
+   height:30px;
+}
+
+
+.chatbot
+{
+  position: absolute;
+  bottom:0px;
+  right: 0px;
+  width:500px;
+  height:30px;
+  cursor:pointer;
+  background: #3b8dbb;
+  border-radius:10px;
+}
+.divmessagerie
+{
+   background: #3b8dbb;
+   color: white;
+   border-radius:10px;
+   font-size:18px;
+   height:30px;
+   padding-top:10px;
+
+}
+.iframe
+{
+  border:2px solid white;
+}
+/*******SIDEBAR NAVIGATION DEBUT **************/
+
+ul.sidebar-menu li a
+{
+ font-size: 13px;
+}
+
+.ul.sidebar-menu li a:hover
+{
+
+}
+#sidebar {
+    width: 250px;
+    position: relative;
+    background: #4ecdc4;
+    border-left:2px solid white;
+    border-right: 2px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+    font-size:19px;
+    z-index:1;
+}
+.dropdown-menu
+{ 
+ border-color:2px solid white;
+ z-index:2; 
+}
+
+.footerBtn,.footerBtn:hover
+{
+  background: #3b8dbb;
+  color: white;
+  border:2px solid #3b8dbb;
+  border-radius:8px;
+  font-size:18px;
+}
+
+.btn_green
+{
+   background: #4ecdc4;
+   border:2px solid #4ecdc4;
+   color:white;
+}
+
+.btnBluelog, .btnBluelog:hover, .btnBluelog:focus
+{
+  background: #1976d2;
+  border:2px solid #1976d2;
+  color:white;
+  box-shadow: 1px 1px 1px #1976d2; 
+}
+
+.formsso
+{
+   background: white;
+   padding:15px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 3px #cccccc;
+}
+.input_fond
+{
+  background: #f2f2f2;
+  
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+{
+  color:white;
+}
+.navbar-default
+{ 
+   background:#3b8dbb;
+   color:white;
+ }
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.container_center
+{
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
